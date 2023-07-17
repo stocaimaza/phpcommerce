@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de categorías</title>
+    <style>
+        /* Estilos para la tabla */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lista de categorías</h1>
+    </header>
+
+    <main>
+        <?php if (isset($lista_ctg) && (is_array($lista_ctg) || is_object($lista_ctg))) { ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($lista_ctg as $categoria) { ?>
+                <tr>
+                    <td>
+                        <?php echo $categoria['id']; ?>
+                    </td>
+                    <td>
+                        <?php echo $categoria['nombre_categoria']; ?>
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+        <?php } else { ?>
+        <p>No se encontraron categorías.</p>
+        <?php } ?>
+    </main>
+
+    <footer>
+        <p>Samuel Tocaimaza</p>
+    </footer>
+</body>
+
+</html>

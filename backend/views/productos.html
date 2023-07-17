@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/css/estilos.css">
+</head>
+
+<body>
+    <h1>Alta de productos electrónicos</h1>
+    <form id="formulario-productos">
+        <label for="nombre">Nombre del producto:</label>
+        <input type="text" id="nombre" name="nombre" >
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="5"></textarea>
+
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria" >
+            <option value="">Seleccionar</option>
+            <option value="1">Celulares</option>
+            <option value="2">Computadoras</option>
+            <option value="3">Tablets</option>
+            <option value="4">Accesorios</option>
+        </select>
+
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*">
+
+        <label for="precio">Precio:</label>
+        <input type="text" id="precio" name="precio">
+
+
+        <button type="submit">Guardar</button>
+        <button type="button" class="cancel">Cancelar</button>
+    </form>
+    <div class="tag">&copy; Samuel Tocaimaza</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="../../assets/js/validaciones.js"></script>
+</body>
+
+</html>
